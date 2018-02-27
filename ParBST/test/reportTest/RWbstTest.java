@@ -1,6 +1,7 @@
 package reportTest;
 
 
+import BSTthread.Pool;
 import bst.RWBST;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -16,7 +17,7 @@ import java.util.stream.IntStream;
 @RunWith(Parameterized.class)
 public class RWbstTest {
     private RWBST tree;
-    private thread.Pool pool;
+    private Pool pool;
 
     private int threadSize;
     private int[] searchRatio;
@@ -32,7 +33,7 @@ public class RWbstTest {
     @Before
     public void makeInstance() throws Exception {
         tree = new RWBST();
-        pool = new thread.Pool(threadSize);
+        pool = new Pool(threadSize);
     }
 
     @Parameterized.Parameters

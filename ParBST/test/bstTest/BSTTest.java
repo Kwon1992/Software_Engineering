@@ -1,5 +1,6 @@
 package bstTest;
 
+import BSTthread.Pool;
 import bst.BST;
 
 import org.junit.Before;
@@ -14,7 +15,7 @@ import static org.junit.Assert.*;
 
 public class BSTTest {
     private static BST tree;
-    private static thread.Pool pool;
+    private static Pool pool;
 
     private static final int testSize = 1000000;
     private static List<Integer> numbers;
@@ -24,7 +25,7 @@ public class BSTTest {
         numbers = IntStream.range(0, testSize).boxed().collect(Collectors.toList());
         Collections.shuffle(numbers);
 
-        pool = new thread.Pool(4);
+        pool = new Pool(4);
     }
 
     @Before

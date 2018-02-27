@@ -1,5 +1,6 @@
 package list;
 
+import BSTthread.Pool;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -13,7 +14,7 @@ import static org.junit.Assert.*;
 
 public class LinkedListTest {
     private static LinkedList list;
-    private static thread.Pool pool;
+    private static Pool pool;
 
     private static final int testSize = 1000000;
     private static List<Integer> numbers;
@@ -29,7 +30,7 @@ public class LinkedListTest {
     @Before
     public void makeInstance() throws Exception {
         list = new LinkedList();
-        pool = new thread.Pool(4);
+        pool = new Pool(4);
     }
 
     @Test

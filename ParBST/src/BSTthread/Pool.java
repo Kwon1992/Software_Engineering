@@ -1,4 +1,4 @@
-package thread;
+package BSTthread;
 
 import java.util.Arrays;
 import java.util.concurrent.LinkedBlockingQueue;
@@ -68,7 +68,7 @@ public class Pool {
 
 
 // // Usage
-// thread.Pool pool = new thread.Pool(8);
+// Pool pool = new Pool(8);
 // pool.push(() -> {
 //     /* do something */
 // });

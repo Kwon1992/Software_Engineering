@@ -1,6 +1,7 @@
 package reportTest;
 
 
+import BSTthread.Pool;
 import bst.RWBST;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -15,7 +16,7 @@ import static org.junit.Assert.assertTrue;
 
 public class RWbstInsertSearchTest {
     private static RWBST tree;
-    private static thread.Pool pool;
+    private static Pool pool;
 
     private static final int testSize = 1000000;
     private static List<Integer> numbers;
@@ -25,7 +26,7 @@ public class RWbstInsertSearchTest {
         numbers = IntStream.range(0, testSize).boxed().collect(Collectors.toList());
         Collections.shuffle(numbers);
 
-        pool = new thread.Pool(4);
+        pool = new Pool(4);
     }
 
     @Before

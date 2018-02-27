@@ -1,5 +1,6 @@
 package bstTest;
 
+import BSTthread.Pool;
 import bst.BST;
 import org.junit.Before;
 import org.junit.BeforeClass;
@@ -15,7 +16,7 @@ import java.util.stream.IntStream;
 @RunWith(Parameterized.class)
 public class BSTPerformanceTest {
     private BST tree;
-    private thread.Pool pool;
+    private Pool pool;
 
     private int threadSize;
     private int[] searchRatio;
@@ -31,7 +32,7 @@ public class BSTPerformanceTest {
     @Before
     public void makeInstance() throws Exception {
         tree = new BST();
-        pool = new thread.Pool(threadSize);
+        pool = new Pool(threadSize);
     }
 
     @Parameterized.Parameters
